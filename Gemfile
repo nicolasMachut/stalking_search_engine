@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.19'
-gem 'mongo'
-gem "mongo_mapper"
-gem 'bson_ext'
+gem 'mongo', :git => 'git://github.com/mongodb/mongo-ruby-driver.git'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

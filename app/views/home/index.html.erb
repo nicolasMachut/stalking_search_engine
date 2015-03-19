@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="header center teal-text text-lighten-2">Stalking Search Engine</h1>
+    <div class="row">
+        <form class="col s12">
+            <div class="row z-depth-5" style="margin-top : 10%;">
+                <div class="input-field col s10">
+                    <input id="recherche" type="text" class="validate">
+                    <label for="recherche">Ok Stalking</label>
+                </div>
+                <div class="col s2" style="margin-top : 25px;">
+                    <button class="btn waves-effect waves-light" type="button" name="action" onclick="search()">Search
+                        <i class="mdi-action-search right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="progress" id="searchProgresse" style="display : none;">
+                <div class="indeterminate"></div>
+            </div>
+        </form>
+    </div>
+    <div id="results" style="display : none;"></div>
+</div>
+<script>
+    $(document).ready(function(){
+        $('.tooltipped').tooltip({delay: 50});
+    });
+</script>

@@ -8,4 +8,4 @@ services:
 deploy:
   provider: heroku
   api_key: ce9db6ea-67fc-45ea-9d8e-a9702e9f72f2
-  app: polar-inlet-2136
+  app: pacific-ocean-1985

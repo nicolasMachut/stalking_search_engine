@@ -7,14 +7,19 @@ development:
   database: stalking
   username: nicolas
   password: epsi
+  role: dbOwner
 
 test:
   <<: *defaults
   database: stalking
+    username: nicolas
+    password: epsi
+    role: dbOwner
 
 # set these environment variables on your prod server
 production:
   <<: *defaults
   database: stalking
-  username: nicolas
-  password: epsi
+    username: nicolas
+    password: epsi
+    role: dbOwner

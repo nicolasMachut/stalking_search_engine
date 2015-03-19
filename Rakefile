@@ -7,3 +7,4 @@ task :default
 require File.expand_path('../config/application', __FILE__)
 
 StalkingSearchEngine::Application.load_tasks
+

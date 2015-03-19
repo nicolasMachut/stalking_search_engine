@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.19'
 gem 'mongo', :git => 'git://github.com/mongodb/mongo-ruby-driver.git'
+gem 'rails_12factor'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

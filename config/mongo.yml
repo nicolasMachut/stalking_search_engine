@@ -12,14 +12,12 @@ development:
 test:
   <<: *defaults
   database: stalking
-    username: nicolas
-    password: epsi
-    role: dbOwner
+  role: dbOwner
 
 # set these environment variables on your prod server
 production:
   <<: *defaults
   database: stalking
-    username: nicolas
-    password: epsi
-    role: dbOwner
+  username: nicolas
+  password: epsi
+  role: dbOwner

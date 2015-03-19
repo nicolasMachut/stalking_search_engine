@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.19'
-require 'mongo'
+gem 'mongo'
 gem "mongo_mapper"
 
 # Bundle edge Rails instead:

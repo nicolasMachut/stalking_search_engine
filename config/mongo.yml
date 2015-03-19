@@ -1,20 +1,20 @@
 defaults: &defaults
-  host: 127.0.0.1
-  port: 27017
+  host: ds053778.mongolab.com
+  port: 53778
 
 development:
   <<: *defaults
-  database: db_development
-  username: user
-  password: password
+  database: stalking
+  username: nicolas
+  password: epsi
 
 test:
   <<: *defaults
-  database: db_test
+  database: stalking
 
 # set these environment variables on your prod server
 production:
   <<: *defaults
-  database:
-  username:
-  password:
+  database: stalking
+  username: nicolas
+  password: epsi

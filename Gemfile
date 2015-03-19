@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 gem 'rails', '3.2.19'
-gem 'mongo', :git => 'git://github.com/mongodb/mongo-ruby-driver.git'
 gem 'rails_12factor'
+gem'activemodel'
+gem 'mongo'
+gem 'mongo_mapper'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 gem 'rails', '3.2.19'
-gem 'mongo', :git => 'git://github.com/mongodb/mongo-ruby-driver.git'
+gem 'mongo'
 gem 'rails_12factor'
+gem 'mongo_mapper'
+gem 'bson_ext'
 
 
 # Bundle edge Rails instead:

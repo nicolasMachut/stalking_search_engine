@@ -1,12 +1,12 @@
 defaults: &defaults
-  host: 127.0.0.1
-  port: 27017
+  host: ds053778.mongolab.com
+  port: 53778
 
 development:
   <<: *defaults
   database: stalking
-  username: dbuser
-  password: password
+  username: nicolas
+  password: epsi
 
 test:
   <<: *defaults
@@ -16,5 +16,5 @@ test:
 production:
   <<: *defaults
   database: stalking
-  username: dbuser
-  password: dbpassword
+  username: nicolas
+  password: epsi

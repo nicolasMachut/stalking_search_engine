@@ -4,6 +4,8 @@ gem 'rails', '3.2.19'
 gem 'rails_12factor'
 gem 'mongoid'
 
+gem 'bson_ext'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

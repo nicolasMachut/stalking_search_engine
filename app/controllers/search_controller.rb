@@ -1,14 +1,18 @@
+require 'open-uri'
 class SearchController < ApplicationController
+
+
   def search
-    puts [params[:keyWords]]
+    keyword = [params[:keyWords]][0]
 
-    fakeData = [{ nom: "Machut", prenom: "Nicolas", genre: "", anneeNaissance: "", tel: "", mail: "", photos: [], adresse: {rue: "", codePostal: "", ville: "", }, profils: [], relations: [] }, { nom: "Souan", prenom: "Edouard", genre: "",anneeNaissance: "",tel: "",mail: "",photos: [],adresse: {rue: "",codePostal: "",ville: "" },profils: [],relations: [] }, { nom: "Henin", prenom: "Johan", genre: "",anneeNaissance: "",tel: "",mail: "",photos: [],adresse: {rue: "",codePostal: "",ville: "" },profils: [],relations: [] }]
+    response = open('https://api.github.com/users?since=135').read
+    puts JSON.parse(response)[0].login
 
-    personne = Personne.new("nicolas")
-    puts personne.all
-    puts personne.save
-    puts personne.all
-
-    render json: fakeData
+    render json: find(keyword)
   end
+
+  def find (value)
+    return Personne.any_of({nom: value},{prenom: value}, {genre:value}, {anneeNaissance:value})
+  end
+
 end

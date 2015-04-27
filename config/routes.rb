@@ -1,4 +1,7 @@
 StalkingSearchEngine::Application.routes.draw do
+  resources :articles
+
+
   get "search/search"
 
   get "home/index"

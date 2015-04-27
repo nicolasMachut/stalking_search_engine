@@ -25,6 +25,7 @@ function searchRequest (keyWords) {
             $("#searchProgresse").slideUp();
             $("#results").slideDown();
             var nbResult = msg.length;
+            console.log(msg);
             toast(nbResult + " result(s) match your search", 4000)
 
             for (var i = 0; i < nbResult; i++) {
@@ -45,20 +46,33 @@ function afficherPersonne (personne, i) {
         row.setAttribute("id", "personne." + i);
     }
 
+
     var col = document.createElement("div");
     col.setAttribute("class", "col s12 m6");
 
     var card = document.createElement("div");
     card.setAttribute("class", "card-panel teal z-depth-2");
 
-    var span = document.createElement("span");
-    span.setAttribute("class", "white-text");
-    var t = document.createTextNode(personne.nom + " " + personne.prenom);
-    span.appendChild(t);
+    var nomPrenom = createParagraphe(personne.nom + " " + personne.prenom);
+
+    var email = createParagraphe(personne.mail)
+
+    var adresse = createParagraphe(personne.adresse.rue + " " + personne.adresse.codePostal + " " + personne.adresse.ville);
+
 
     row.appendChild(col);
     col.appendChild(card);
-    card.appendChild(span);
+    card.appendChild(nomPrenom);
+    card.appendChild(email);
+    card.appendChild(adresse);
 
     document.getElementById("results").appendChild(row);
+}
+
+function createParagraphe (text) {
+    var para = document.createElement("p");
+    para.setAttribute("class", "white-text");
+    var value = document.createTextNode(text);
+    para.appendChild(value);
+    return para;
 }

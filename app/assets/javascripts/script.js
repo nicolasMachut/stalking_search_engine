@@ -3,7 +3,7 @@ function search () {
     var keyWords = $("#recherche").val();
 
     if (keyWords != "") {
-        $("#results").slideUp();
+        $("#results").hide();
         $("#results").empty();
         $("#searchProgresse").slideDown();
         searchRequest(keyWords);

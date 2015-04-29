@@ -1,0 +1,23 @@
+defaults: &defaults
+  host: ds053778.mongolab.com
+  port: 53778
+
+development:
+  <<: *defaults
+  database: stalking
+  username: nicolas
+  password: epsi
+  role: dbOwner
+
+test:
+  <<: *defaults
+  database: stalking
+  role: dbOwner
+
+# set these environment variables on your prod server
+production:
+  <<: *defaults
+  database: stalking
+  username: nicolas
+  password: epsi
+  role: dbOwner

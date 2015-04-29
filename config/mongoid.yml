@@ -8,3 +8,13 @@ development:
         - ds053778.mongolab.com:53778
       options:
 
+production:
+  sessions:
+    default:
+      database: stalking
+      username: nicolas
+      password: epsi
+      hosts:
+        - ds053778.mongolab.com:53778
+      options:
+

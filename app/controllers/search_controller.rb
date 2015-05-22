@@ -9,7 +9,7 @@ class SearchController < ApplicationController
   end
 
   def find (value)
-    return Personne.any_of({nom: Regexp.new (".*"+value+".*")},{prenom: value}, {genre:value}, {anneeNaissance:value})
+    return Personne.any_of({nom: /value/},{prenom: value}, {genre:value}, {anneeNaissance:value})
   end
 
 end

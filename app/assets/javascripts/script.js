@@ -55,7 +55,9 @@ function afficherPersonne (personne, i) {
 
     var nomPrenom = createParagraphe(personne.nom + " " + personne.prenom);
 
-    var email = createParagraphe(personne.mail)
+    var email = createParagraphe(personne.mail);
+
+    var telephone = createParagraphe(personne.tel)
 
     var adresse = createParagraphe(personne.adresse.rue + " " + personne.adresse.codePostal + " " + personne.adresse.ville);
 
@@ -65,6 +67,7 @@ function afficherPersonne (personne, i) {
     card.appendChild(nomPrenom);
     card.appendChild(email);
     card.appendChild(adresse);
+    card.appendChild(telephone);
 
     document.getElementById("results").appendChild(row);
 }

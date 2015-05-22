@@ -25,6 +25,7 @@ end
 
 gem 'jquery-rails'
 gem 'puma'
+gem 'regex'
 
 
 # To use ActiveModel has_secure_password

@@ -1,4 +1,5 @@
 require 'open-uri'
+require 'regexp'
 class SearchController < ApplicationController
 
 
@@ -9,7 +10,7 @@ class SearchController < ApplicationController
   end
 
   def find (value)
-    return Personne.any_of({nom: /value/i},{prenom: value}, {genre:value}, {anneeNaissance:value})
+    return Personne.any_of({nom: Regexp.new ("/.*"+value+".*/")},{prenom: value}, {genre:value}, {anneeNaissance:value})
   end
 
 end
